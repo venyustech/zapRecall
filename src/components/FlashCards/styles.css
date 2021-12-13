@@ -1,0 +1,56 @@
+.wrapper-flashcards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.navBar {
+    position: relative;
+}
+
+.card-wrapper {
+    height: 87vh;
+    width: 380px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px 0px #0000001F;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contador {
+    padding: 30px;
+    font-weight: 700;
+    display: flex;
+}
+
+.flashcard-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.logo-enter {
+    height: 49px;
+    width: 49px;
+    left: 855px;
+    top: 738px;
+    border-radius: 10px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin: 20px;
+}
+
+
+.logo-enter:hover {
+    filter: brightness(95%);
+}
+
+.box-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}

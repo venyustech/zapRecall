@@ -1,19 +1,18 @@
 import './styles.css';
-export default function TelaInicial(props) {
+export default function Finish(props) {
 
     return (
         <div className="inicio">
             <section>
                 <div className='logo-card'>
-                    <img class='logo-image' src='https://i.imgur.com/oWeLiFK.png'></img>
+                    Fimmmmmmmmmmmm
                 </div>
                 <button
                     className='login-bottom'
-                    onClick={() => props.setActualPage('FlashCards')}>
+                    onClick={() => props.setActualPage('TelaInicial')}>
                     Praticar React
                 </button>
             </section >
         </div >
     );
 }
-

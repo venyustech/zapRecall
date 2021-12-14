@@ -22,7 +22,9 @@
 }
 
 .contador, .card-title {
-    padding: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+
     font-weight: 700;
     display: flex;
 }

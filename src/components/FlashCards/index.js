@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import FlashCard from '../FlashCard';
 
 export default function FlashCards() {
-    const [cardsCounter, setContador] = useState(1);
+    let [cardsCounter, setContador] = useState(1);
 
     function ContadorAdd() {
         setContador(cardsCounter + 1)
@@ -15,7 +15,9 @@ export default function FlashCards() {
                 <FlashCard
                     cardsCounter={cardsCounter}
                     flashCardsLenght="8"
-                    title="testezinho basico"
+                    question="testezinho basico"
+                    answer="Eu nostrud consequat dolor consectetur officia."
+
                 />
             </div>
         </>

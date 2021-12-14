@@ -21,15 +21,24 @@
     align-items: center;
 }
 
-.contador {
+.contador, .card-title {
     padding: 30px;
     font-weight: 700;
     display: flex;
 }
 
+.card-title {
+    width: 50%;
+}
+
 .flashcard-title {
     font-size: 32px;
     font-weight: 700;
+}
+
+.flashcard-back {
+    margin: 0 30px;
+    word-break: break-all;
 }
 
 .logo-enter {
@@ -53,4 +62,42 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
+}
+
+.answer-wrapper {
+    width: 100%;
+}
+
+.answer-options-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.answer-bottom {
+    height: 48px;
+    width: 65px;
+    font-size: smaller;
+    border-radius: 12px;
+    display: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.black-bottom {
+    border: 3px solid black;
+}
+
+.red-bottom {
+    border: 3px solid #F64848
+}
+
+.green-bottom {
+    border: 3px solid #62DB38
+}
+
+.yellow-bottom {
+    border: 3px solid #FFEF61
 }

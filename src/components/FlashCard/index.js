@@ -40,33 +40,39 @@ export default function FlashCard(props) {
                             <p className='contador'>{props.cardsCounter}/{props.flashCardsLenght}</p>
                         </div>
                         <p className='flashcard-back'>{props.answer}</p>
-                        {answered == "false" ?
-                            <div className='answer-wrapper'>
-                                <div className='answer-options-wrapper'>
-                                    <button className='answer-bottom black-bottom' onClick={() => setBorderColor('black-bottom')}>
-                                        Aprendi agora
-                                    </button>
-                                    <button className='answer-bottom red-bottom' onClick={() => setBorderColor('red-bottom')}>
-                                        Não lembrei
-                                    </button>
-                                    <button className='answer-bottom green-bottom' onClick={() => setBorderColor('green-bottom')}>
-                                        Lembrei com esforço
-                                    </button>
-                                    <button className='answer-bottom yellow-bottom' onClick={() => setBorderColor('yellow-bottom')}>
-                                        Zap!
-                                    </button>
-
-                                </div>
-                            </div>
-                            : ''}
-                        {answered == "true" ?
-                            <div className='box-wrapper'>
-                                <img class='logo-enter' src='https://i.imgur.com/OuOFKHs.png' onClick={() => setFrontCard(false)}></img>
-                            </div>
-                            : ''}
+                        <IsAnswered />
                     </div>
                 </section >
             </>
 
         );
+
+    function IsAnswered() {
+        if (!answered) {
+            return (
+                <div className='box-wrapper'>
+                    <img class='logo-enter' src='https://i.imgur.com/OuOFKHs.png' onClick={() => setFrontCard(false)}></img>
+                </div>
+            )
+        }
+        return (
+            <div className='answer-wrapper'>
+                <div className='answer-options-wrapper'>
+                    <button className='answer-bottom black-bottom' onClick={() => setAnswered(true)}>
+                        Aprendi agora
+                    </button>
+                    <button className='answer-bottom red-bottom' onClick={() => { setBorderColor('red-bottom'); setAnswered(true) }}>
+                        Não lembrei
+                    </button>
+                    <button className='answer-bottom green-bottom' onClick={() => { setBorderColor('green-bottom'); setAnswered(true) }}>
+                        Lembrei com esforço
+                    </button>
+                    <button className='answer-bottom yellow-bottom' onClick={() => { setBorderColor('yellow-bottom'); setAnswered(true) }}>
+                        Zap!
+                    </button>
+                </div>
+            </div >
+
+        )
+    }
 }
